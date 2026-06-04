@@ -1,0 +1,16 @@
+# Credenciales Firebase
+scripts/firebase.js
+
+# Dependencias (por si usas npm en el futuro)
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

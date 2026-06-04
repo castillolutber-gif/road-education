@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Drift - Login</title>
+</head>
+<body>
+  <h1>Car Drift</h1>
+  <button id="btnLogin">Iniciar sesión con Google</button>
+
+  <script type="module" src="scripts/auth.js"></script>
+  <script type="module">
+    import { loginConGoogle, escucharSesion } from "./scripts/auth.js";
+
+    // Si ya hay sesión activa, redirige directo al juego
+    escucharSesion((user) => {
+      if (user) window.location.href = "game.html";
+    });
+
+    document.getElementById("btnLogin").addEventListener("click", () => {
+      loginConGoogle();
+    });
+  </script>
+</body>
+</html>
